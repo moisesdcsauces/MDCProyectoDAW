@@ -43,6 +43,7 @@ ol {
   --color-blanco: #f7f7f5;
   --color-azul: #1e3fff;
   --color-azul-claro: #6c86ff;
+  --color-papel: #ecebe6;
   --fuente-titulos: 'Bodoni Moda', serif;
   --fuente-texto: 'Inter', sans-serif;
   --fuente-gotica: 'UnifrakturMaguntia', cursive;
@@ -243,6 +244,16 @@ button:focus-visible {
   color: var(--color-negro);
   opacity: 0.7;
   line-height: 1.4;
+}
+
+.modulos__accion {
+  margin-top: auto;
+  font-family: var(--fuente-texto);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-azul);
 }
 
 /* ============================================

@@ -1,0 +1,269 @@
+/* ============================================
+   PÁGINAS DE ASIGNATURA
+   ============================================ */
+[hidden] {
+  display: none !important;
+}
+
+/* ============================================
+   BLOQUE: ASIGNATURA (banda de título)
+   ============================================ */
+.asignatura {
+  background: var(--color-negro);
+  color: var(--color-blanco);
+  padding: 6.75rem 1.5rem 4.5rem;
+  text-align: center;
+}
+
+.asignatura__etiqueta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  font-family: var(--fuente-texto);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-azul-claro);
+}
+
+.asignatura__cruz {
+  height: 14px;
+  width: auto;
+}
+
+.asignatura__titulo {
+  max-width: 22ch;
+  margin: 0 auto;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4.2vw, 3rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+/* ============================================
+   BLOQUE: UNIDADES-NAV (INICIO + una unidad cada botón)
+   ============================================ */
+.unidades-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 2.25rem;
+}
+
+.unidades-nav__enlace {
+  padding: 0.6rem 1.1rem;
+  border: 1px solid rgba(247, 247, 245, 0.4);
+  font-family: var(--fuente-texto);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-blanco);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.unidades-nav__enlace:hover,
+.unidades-nav__enlace:focus-visible {
+  background: var(--color-azul);
+  border-color: var(--color-azul);
+}
+
+/* ============================================
+   BLOQUE: ÍNDICE
+   ============================================ */
+.indice {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem var(--espaciado-seccion);
+}
+
+/* ============================================
+   BLOQUE: BUSCADOR (cabalga sobre el borde de la banda)
+   ============================================ */
+.buscador {
+  position: relative;
+  max-width: 40rem;
+  margin: -1.75rem auto 3rem;
+}
+
+.buscador__etiqueta {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.buscador__icono {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-negro);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.buscador__campo {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 1rem 0 3rem;
+  background: #fff;
+  color: var(--color-negro);
+  border: 1px solid var(--color-negro);
+  border-radius: 0;
+  appearance: none;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+}
+
+.buscador__campo:focus-visible {
+  outline: 2px solid var(--color-azul);
+  outline-offset: 3px;
+}
+
+.buscador__vacio {
+  padding: 3rem 0;
+  text-align: center;
+  font-family: var(--fuente-texto);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.6;
+}
+
+/* ============================================
+   BLOQUE: UNIDAD
+   ============================================ */
+.unidad {
+  scroll-margin-top: 5rem;
+}
+
+.unidad:not([hidden]) ~ .unidad:not([hidden]) {
+  margin-top: 3.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid rgba(10, 10, 10, 0.15);
+}
+
+.unidad__titulo {
+  padding-left: 1rem;
+  border-left: 4px solid var(--color-azul);
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  line-height: 1.15;
+}
+
+.unidad__numero {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: var(--fuente-texto);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-azul);
+}
+
+.unidad__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+}
+
+/* ============================================
+   BLOQUE: PRÁCTICA (caja de práctica)
+   ============================================ */
+.practica {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-blanco);
+  border: 1px solid var(--color-negro);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.practica:hover,
+.practica:focus-within {
+  border-color: var(--color-azul);
+  box-shadow: 0 0 0 1px var(--color-azul);
+}
+
+.practica__icono-caja {
+  display: grid;
+  place-items: center;
+  height: 8.5rem;
+  background: var(--color-papel);
+  border-bottom: 1px solid var(--color-negro);
+  transition: background 0.25s ease;
+}
+
+.practica:hover .practica__icono-caja,
+.practica:focus-within .practica__icono-caja {
+  background: var(--color-negro);
+}
+
+.practica__icono {
+  width: 44px;
+  height: 44px;
+  transition: filter 0.25s ease;
+}
+
+.practica:hover .practica__icono,
+.practica:focus-within .practica__icono {
+  filter: invert(1);
+}
+
+.practica__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.practica__codigo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Nombre de la práctica: se usará cuando el usuario los dicte */
+.practica__nombre {
+  font-family: var(--fuente-texto);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+}
+
+.practica__estado {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--color-azul);
+  font-family: var(--fuente-texto);
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-azul);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 540px) {
+  .asignatura {
+    padding-top: 6.25rem;
+  }
+}
