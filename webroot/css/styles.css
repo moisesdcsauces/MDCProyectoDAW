@@ -47,7 +47,10 @@ ol {
   --fuente-titulos: 'Bodoni Moda', serif;
   --fuente-texto: 'Inter', sans-serif;
   --fuente-gotica: 'UnifrakturMaguntia', cursive;
-  --espaciado-seccion: clamp(3rem, 8vw, 7rem);
+  --altura-cabecera: 60px;
+  --margen-lateral: 24px;
+  --ancho-contenido: 1200px;
+  --espaciado-seccion: 112px;
 }
 
 body {
@@ -66,7 +69,7 @@ button:focus-visible {
 
 /* ============================================
    BLOQUE: MONOGRAMA
-   (marca reutilizada en la cabecera y el pie)
+   (la cruz de la cabecera, una a cada lado)
    ============================================ */
 .monograma {
   height: 24px;
@@ -82,6 +85,7 @@ button:focus-visible {
   top: 0;
   left: 0;
   width: 100%;
+  height: var(--altura-cabecera);
   z-index: 100;
   background: var(--color-negro);
   border-bottom: 1px solid transparent;
@@ -94,13 +98,14 @@ button:focus-visible {
 
 .cabecera__contenedor {
   position: relative;
-  max-width: 900px;
+  max-width: var(--ancho-contenido);
+  height: 100%;
   margin: 0 auto;
-  padding: 1.1rem 1.5rem;
+  padding: 0 var(--margen-lateral);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 16px;
 }
 
 .cabecera__banner {
@@ -112,58 +117,46 @@ button:focus-visible {
   width: auto;
 }
 
-.cabecera__enlace-github {
-  display: inline-flex;
-  color: var(--color-blanco);
-  transition: color 0.25s ease;
-}
-
-.cabecera__enlace-github:hover,
-.cabecera__enlace-github:focus-visible {
-  color: var(--color-azul-claro);
-}
-
-.cabecera__enlace-github svg {
-  width: 22px;
-  height: 22px;
-}
-
 /* ============================================
    BLOQUE: PRESENTACIÓN (hero)
    ============================================ */
 .presentacion {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px var(--margen-lateral);
   background: var(--color-negro);
   color: var(--color-blanco);
-  padding: 5px;
   text-align: center;
 }
 
 .presentacion__logo {
-  width: 90px;
+  width: 72px;
   height: auto;
-  margin: 0 auto 15px;
+  margin: 0 auto 8px;
   transition: transform 0.3s ease;
 }
 
 .presentacion__titulo {
   font-family: var(--fuente-titulos);
-  font-weight: 100;
-  font-size: 25px;
+  font-weight: 700;
+  font-size: 28px;
   line-height: 1.05;
   text-transform: uppercase;
 }
 
 .presentacion__enlace-horario {
   display: inline-block;
-  margin-top: 1.75rem;
+  margin-top: 10px;
   font-family: var(--fuente-texto);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--color-blanco);
   border-bottom: 1px solid var(--color-blanco);
-  padding-bottom: 0.3rem;
+  padding-bottom: 5px;
   transition: color 0.25s ease, border-color 0.25s ease;
 }
 
@@ -173,28 +166,29 @@ button:focus-visible {
   border-color: var(--color-azul);
 }
 
-main{
-  padding-top: 50px;
-}
-
 /* ============================================
    BLOQUE: MÓDULOS
    ============================================ */
 .modulos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   background: var(--color-blanco);
   color: var(--color-negro);
-  padding: 58px;
-  max-width: 1200px;
-  margin: auto auto;
+  padding: 20px var(--margen-lateral) 24px;
+  max-width: var(--ancho-contenido);
+  margin: 0 auto;
 }
 
 .modulos__titulo {
   font-family: var(--fuente-texto);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.8rem;
+  letter-spacing: 3px;
+  font-size: 13px;
   color: var(--color-azul);
-  margin-bottom: 3rem;
+  margin-bottom: 24px;
   text-align: center;
 }
 
@@ -216,10 +210,10 @@ main{
 
 .modulos__tarjeta {
   background: var(--color-blanco);
-  padding: 2rem 1.5rem;
+  padding: 24px 20px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 12px;
   border: 1px solid transparent;
   transition: border-color 0.25s ease;
 }
@@ -236,15 +230,16 @@ main{
 
 .modulos__codigo {
   font-family: var(--fuente-titulos);
-  font-size: 1.5rem;
+  font-size: 24px;
+  line-height: 1.2;
   font-weight: 700;
 }
 
 .modulos__descripcion {
   font-family: var(--fuente-texto);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-size: 11px;
   color: var(--color-negro);
   opacity: 0.7;
   line-height: 1.4;
@@ -253,10 +248,10 @@ main{
 .modulos__accion {
   margin-top: auto;
   font-family: var(--fuente-texto);
-  font-size: 0.65rem;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 1px;
   color: var(--color-azul);
 }
 
@@ -266,41 +261,71 @@ main{
 .pie {
   background: var(--color-negro);
   color: var(--color-blanco);
-  padding: 1rem 0.5rem;
+  padding: 48px var(--margen-lateral);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: 12px;
   text-align: center;
-}
-
-.pie .monograma {
-  height: 28px;
 }
 
 .pie__texto {
   font-family: var(--fuente-texto);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-size: 11px;
   opacity: 0.7;
+}
+
+/* ============================================
+   BLOQUE: PÁGINA AJUSTADA
+   (home y horario: ocupan justo la pantalla y solo hacen
+   scroll si la ventana es demasiado baja o estrecha)
+   ============================================ */
+.pagina-ajustada {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--altura-cabecera);
+}
+
+.pagina-ajustada > main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina-ajustada > .pie {
+  padding: 12px var(--margen-lateral);
 }
 
 /* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 900px) {
+  :root {
+    --espaciado-seccion: 60px;
+  }
+
   .modulos__lista {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .presentacion__titulo {
+    font-size: 26px;
   }
 }
 
 @media (max-width: 540px) {
+  :root {
+    --espaciado-seccion: 48px;
+  }
+
   .modulos__lista {
     grid-template-columns: 1fr;
   }
 
-  .presentacion {
-    padding-top: calc(var(--espaciado-seccion) + 3.5rem);
+  .presentacion__titulo {
+    font-size: 22px;
   }
 }
