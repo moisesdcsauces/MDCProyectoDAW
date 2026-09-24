@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prácticas CIB | Moisés Alberto Domínguez Cruz - DAW2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@400;500;600;700;800&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../webroot/css/styles.css">
+  <link rel="stylesheet" href="../asignaturas.css">
+</head>
+<body>
+  <!-- Bloque: Cabecera -->
+  <header id="site-header" class="cabecera">
+    <div class="cabecera__contenedor">
+      <img class="monograma" src="../../images/cruz.png" alt="">
+      <img class="cabecera__banner" src="../../images/titulo-pagina.png" alt="Moisés Alberto Domínguez Cruz">
+    </div>
+  </header>
+
+  <main>
+    <!-- Bloque: Asignatura -->
+    <section class="asignatura">
+      <p class="asignatura__etiqueta"><img class="asignatura__cruz" src="../../images/cruz.png" alt=""> Índice de prácticas</p>
+      <h1 class="asignatura__titulo">Fundamentos de Ciberseguridad</h1>
+      <nav class="unidades-nav" aria-label="Unidades de la asignatura">
+        <a class="unidades-nav__enlace" href="../../../../index.html">← Inicio</a>
+        <a class="unidades-nav__enlace" href="#ut1">UT1</a>
+        <a class="unidades-nav__enlace" href="#ut2">UT2</a>
+        <a class="unidades-nav__enlace" href="#ut3">UT3</a>
+        <a class="unidades-nav__enlace" href="#ut4">UT4</a>
+      </nav>
+    </section>
+
+    <!-- Bloque: Índice -->
+    <div class="indice">
+      <form class="buscador" role="search">
+        <label class="buscador__etiqueta" for="buscador-campo">Buscar una práctica</label>
+        <svg class="buscador__icono" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="buscador-campo" class="buscador__campo" type="search" placeholder="Busca una práctica o unidad (ej: servidor, aplicación)..." autocomplete="off">
+      </form>
+      <div role="status">
+        <p id="buscador-vacio" class="buscador__vacio" hidden>Ninguna práctica coincide con tu búsqueda</p>
+      </div>
+
+      <section id="ut1" class="unidad" aria-labelledby="ut1-titulo">
+        <h2 id="ut1-titulo" class="unidad__titulo"><span class="unidad__numero">UT1</span> Ciberseguridad</h2>
+        <div class="unidad__lista">
+          <article class="practica">
+            <div class="practica__icono-caja"><img class="practica__icono" src="../../webroot/images/icons/cib.png" alt="" aria-hidden="true"></div>
+            <div class="practica__texto">
+              <h3 class="practica__codigo">P1</h3>
+              <span class="practica__estado">Próximamente</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="ut2" class="unidad" aria-labelledby="ut2-titulo">
+        <h2 id="ut2-titulo" class="unidad__titulo"><span class="unidad__numero">UT2</span> Servidor web seguro</h2>
+        <div class="unidad__lista">
+          <article class="practica">
+            <div class="practica__icono-caja"><img class="practica__icono" src="../../webroot/images/icons/cib.png" alt="" aria-hidden="true"></div>
+            <div class="practica__texto">
+              <h3 class="practica__codigo">P1</h3>
+              <span class="practica__estado">Próximamente</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="ut3" class="unidad" aria-labelledby="ut3-titulo">
+        <h2 id="ut3-titulo" class="unidad__titulo"><span class="unidad__numero">UT3</span> Aplicación web segura</h2>
+        <div class="unidad__lista">
+          <article class="practica">
+            <div class="practica__icono-caja"><img class="practica__icono" src="../../webroot/images/icons/cib.png" alt="" aria-hidden="true"></div>
+            <div class="practica__texto">
+              <h3 class="practica__codigo">P1</h3>
+              <span class="practica__estado">Próximamente</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="ut4" class="unidad" aria-labelledby="ut4-titulo">
+        <h2 id="ut4-titulo" class="unidad__titulo"><span class="unidad__numero">UT4</span> Infraestructura web segura</h2>
+        <div class="unidad__lista">
+          <article class="practica">
+            <div class="practica__icono-caja"><img class="practica__icono" src="../../webroot/images/icons/cib.png" alt="" aria-hidden="true"></div>
+            <div class="practica__texto">
+              <h3 class="practica__codigo">P1</h3>
+              <span class="practica__estado">Próximamente</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Bloque: Pie -->
+  <footer class="pie">
+    <img class="monograma" src="../../webroot/images/cruz.png" alt="">
+    <p class="pie__texto">© Moisés Alberto Domínguez Cruz - IES Los Sauces <span id="year"></span></p>
+  </footer>
+
+  <script src="../../js/main.js" defer></script>
+  <script src="../asignaturas.js" defer></script>
+</body>
+</html>
