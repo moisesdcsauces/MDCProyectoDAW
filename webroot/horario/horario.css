@@ -1,0 +1,222 @@
+/* ============================================
+   BLOQUE: HORARIO
+   (usa los estilos y el reset de webroot/css/styles.css;
+   el alto de pantalla lo reparte .pagina-ajustada de styles.css)
+   ============================================ */
+.horario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px var(--margen-lateral) 10px;
+}
+
+.horario__volver {
+  align-self: flex-start;
+  font-family: var(--fuente-texto);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-negro);
+  border-bottom: 1px solid var(--color-negro);
+  opacity: 0.6;
+  margin-bottom: 8px;
+  transition: opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.horario__volver:hover,
+.horario__volver:focus-visible {
+  opacity: 1;
+  color: var(--color-azul);
+  border-color: var(--color-azul);
+}
+
+.horario__cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--color-negro);
+  padding-bottom: 10px;
+}
+
+.horario__titulo {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.horario__insignia {
+  font-family: var(--fuente-texto);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-blanco);
+  background: var(--color-negro);
+  padding: 8px 16px;
+}
+
+.horario__tabla {
+  flex: none;
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--fuente-texto);
+}
+
+.horario__tabla th {
+  background: var(--color-negro);
+  color: var(--color-blanco);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  text-align: left;
+  border: 1px solid var(--color-negro);
+}
+
+.horario__tabla td {
+  border: 1px solid var(--color-negro);
+  padding: 0;
+  vertical-align: middle;
+}
+
+.horario__tabla tbody tr {
+  height: 68px;
+}
+
+.horario__hora {
+  width: 84px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-negro);
+  opacity: 0.55;
+  padding: 12px 8px;
+}
+
+.horario__clase {
+  padding: 4px 6px;
+  border-left: 3px solid var(--color-azul);
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+.horario__asignatura {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.horario__profesor {
+  display: inline;
+  font-size: 10px;
+  line-height: 1.25;
+  opacity: 0.65;
+}
+
+.horario__aula {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 10px;
+  line-height: 1.25;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.4;
+}
+
+.horario__recreo td {
+  background: var(--color-blanco);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-negro);
+  opacity: 0.4;
+  padding: 10px;
+}
+
+@media print {
+  .cabecera,
+  .horario__volver,
+  .pie {
+    display: none;
+  }
+
+  .pagina-ajustada {
+    display: block;
+    min-height: 0;
+    padding-top: 0;
+  }
+
+  .pagina-ajustada > main {
+    display: block;
+  }
+
+  .horario {
+    display: block;
+    padding: 0;
+    max-width: none;
+  }
+
+  .horario__tabla tbody tr {
+    height: auto;
+  }
+
+  @page {
+    size: landscape;
+    margin: 38px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .horario__tabla tbody tr {
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1199px) {
+  .horario__titulo {
+    font-size: 30px;
+  }
+
+  .horario__tabla tbody tr {
+    height: 96px;
+  }
+
+  .horario__profesor {
+    display: block;
+  }
+
+  .horario__aula {
+    margin-top: 2px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .horario__titulo {
+    font-size: 24px;
+  }
+
+  .horario__tabla {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

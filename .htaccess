@@ -1,0 +1,3 @@
+# Página de error 404 personalizada (Apache).
+# Este archivo va en la carpeta raíz de la web, junto a error/404.html.
+ErrorDocument 404 /error/404.html
