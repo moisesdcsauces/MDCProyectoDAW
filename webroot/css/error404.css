@@ -1,0 +1,165 @@
+/* ============================================
+   PÁGINA 404
+   (usa los tokens y el reset de webroot/css/styles.css;
+   todas las medidas están en px; el alto de pantalla
+   lo reparte .pagina-ajustada de styles.css)
+   ============================================ */
+
+/* ============================================
+   BLOQUE: ERROR404
+   ============================================ */
+.error404 {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 24px var(--margen-lateral);
+  background: var(--color-negro);
+  color: var(--color-blanco);
+  text-align: center;
+  overflow: hidden;
+}
+
+.error404 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.error404__marca {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+}
+
+.error404__marca img {
+  width: 736px;
+  max-width: 92%;
+  height: auto;
+  opacity: 0.07;
+}
+
+.error404__codigo {
+  font-family: 'UnifrakturCook', var(--fuente-gotica);
+  font-weight: 700;
+  font-size: 288px;
+  line-height: 1;
+  letter-spacing: 6px;
+}
+
+.error404__cero-cruz {
+  display: inline-block;
+  height: 178px;
+  width: auto;
+  margin: 0 17px;
+  vertical-align: -6px;
+}
+
+.error404__titulo {
+  margin-top: 8px;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.error404__texto {
+  max-width: 544px;
+  margin-top: 14px;
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  opacity: 0.75;
+}
+
+.error404__ruta {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 11px;
+  border: 1px solid rgba(247, 247, 245, 0.25);
+  font-family: var(--fuente-texto);
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--color-azul-claro);
+  overflow-wrap: anywhere;
+}
+
+.error404__ruta[hidden] {
+  display: none;
+}
+
+.error404__adorno {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 416px;
+  max-width: 100%;
+  margin: 36px 0;
+}
+
+.error404__adorno span {
+  flex: 1;
+  height: 1px;
+  background: rgba(247, 247, 245, 0.25);
+}
+
+.error404__adorno img {
+  height: 18px;
+  width: auto;
+}
+
+.error404__boton {
+  padding: 15px 27px;
+  border: 1px solid var(--color-blanco);
+  font-family: var(--fuente-texto);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-blanco);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.error404__boton:hover,
+.error404__boton:focus-visible {
+  background: var(--color-azul);
+  border-color: var(--color-azul);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .error404__codigo {
+    font-size: 208px;
+    letter-spacing: 4px;
+  }
+
+  .error404__cero-cruz {
+    height: 129px;
+    margin: 0 12px;
+    vertical-align: -4px;
+  }
+
+  .error404__titulo {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 540px) {
+  .error404__codigo {
+    font-size: 136px;
+    letter-spacing: 3px;
+  }
+
+  .error404__cero-cruz {
+    height: 84px;
+    margin: 0 8px;
+    vertical-align: -3px;
+  }
+
+  .error404__titulo {
+    font-size: 20px;
+  }
+}
