@@ -4,5 +4,6 @@
 # Si se entra en una carpeta sin indice no se muestra el listado de archivos: da un error 403.
 Options -Indexes
 
+# Control de errores con las paginas de este proyecto (carpeta error/), para que funcionen
 ErrorDocument 404 /error/404.html
 ErrorDocument 403 /error/403.html

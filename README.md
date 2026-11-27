@@ -12,12 +12,6 @@ Página web del curso DAW2: portada con las asignaturas, enlaces a los proyectos
 - [Horario](webroot/horario/index.html)
 - Páginas de error: [404](error/404.html) y [403](error/403.html)
 
-## Documentación
-
-- [Guía de instalación del servidor (MDC-USED)](doc/Guia-Instalacion-MDC-USED.md)
-- [Servidor web Ubuntu (PDF)](doc/USED-ServidorWeb.pdf)
-- [Cliente de desarrollo Windows 11 (PDF)](doc/W11ED-ClienteDesarrollo.pdf)
-
 ## Estructura
 
 - `index.html`: página principal.
